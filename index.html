@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои дела — простой планировщик</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>Мой список дел</h1>
+        </div>
+
+        <div class="add-task">
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Что нужно сделать?</label>
+                    <input type="text" id="taskInput" placeholder="Например: купить продукты" autocomplete="off">
+                </div>
+                <div class="category-group">
+                    <label>Категория</label>
+                    <select id="categorySelect">
+                        <option value="Учеба">Учеба</option>
+                        <option value="Работа">Работа</option>
+                        <option value="Личное">Личное</option>
+                    </select>
+                </div>
+                <button class="btn-add" id="addTaskBtn">➕ Добавить</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="active">Активные</button>
+                <button class="filter-btn" data-filter="completed">Выполненные</button>
+            </div>
+            <div class="task-counter" id="counterDisplay">Активных: 0</div>
+        </div>
+
+        <div class="task-list-container">
+            <ul class="task-list" id="taskList">
+                <li class="empty-message">➕ Добавьте первую задачу</li>
+            </ul>
+        </div>
+
+        <footer>
+            Данные сохраняются в браузере. Даже после обновления страницы
+        </footer>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
